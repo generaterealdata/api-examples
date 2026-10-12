@@ -1,0 +1,10 @@
+# Never commit keys or downloaded data
+.env
+*.key
+kaggle.json
+__pycache__/
+.ipynb_checkpoints/
+downloads/
+*.zip
+*.sqlite
+*.db
