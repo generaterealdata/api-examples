@@ -2,11 +2,13 @@
 
 Runnable examples for the [GenerateRealData](https://generaterealdata.com) API: describe the data you need, or send your SQL schema, and get related tables back as CSV, JSON, Excel or SQL.
 
+Field lists can use 232 data types, one of the largest built-in type libraries of any test data generator, 222 of them with their own built-in generator (real airport and ICD-10 codes, VINs and IBANs with valid check digits, real cities with matching postcodes and time zones), and more than 200 automatic links keep related fields in each row consistent. The full list: `GET /api/v1/field-types` or the [API reference](https://generaterealdata.com/docs/api/#types).
+
 Every notebook is saved with its output, so you can read the results here without running anything.
 
 ## Notebooks
 
-| | Notebook | What it shows | Core rows used |
+| | Notebook | What it shows | Records used |
 |---|---|---|---:|
 | 01 | [Quickstart: a dataset from one sentence](notebooks/01_quickstart_from_a_description.ipynb) | Describe the data in plain English, download related tables as CSV | 2,000 |
 | 02 | [Test data from your SQL schema](notebooks/02_generate_from_your_sql_schema.ipynb) | Send `CREATE TABLE` statements plus rules; get a SQL script and a SQLite file | 5,000 |
@@ -36,7 +38,7 @@ To open one in Google Colab, replace `github.com` with `colab.research.google.co
    jupyter notebook notebooks/
    ```
 
-Each generated row uses one Core row of your plan. None of the examples uses AI rows. Every request can be tried first with `"dry_run": true`, which validates it and reports what it would use without generating anything.
+Each generated row uses one record of your plan. None of the examples uses AI-generated fields. Every request can be tried first with `"dry_run": true`, which validates it and reports what it would use without generating anything.
 
 ## The shortest example
 

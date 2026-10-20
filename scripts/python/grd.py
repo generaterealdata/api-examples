@@ -86,7 +86,7 @@ def main():
     p.add_argument("--format", choices=["json", "csv", "excel", "sql"], default="csv")
     p.add_argument("--dialect", choices=["postgresql", "mysql", "sqlserver", "sqlite"], help="for --format sql")
     p.add_argument("--seed", type=int, help="same seed and schema give the same data")
-    p.add_argument("--use-ai", action="store_true", help="with --prompt: let free-text fields be written by AI (uses AI rows)")
+    p.add_argument("--use-ai", action="store_true", help="with --prompt: let free-text fields be written by AI (uses AI-generated fields)")
     p.add_argument("--dry-run", action="store_true", help="validate and show what it would use; generate nothing")
     p.add_argument("--out", help="where to save the file")
     a = p.parse_args()
@@ -117,7 +117,7 @@ def main():
     except ApiError as e:
         sys.exit(str(e))
     if a.dry_run:
-        print(f"Valid. Core rows needed: {ds['credits_required']:,} (available: {ds['credits_available']:,}).")
+        print(f"Valid. Records needed: {ds['credits_required']:,} (available: {ds['credits_available']:,}).")
     else:
         print(f"{ds['rows_generated']:,} rows: {ds['rows_per_table']}")
         print(f"schema_id {ds['schema_id']}, seed {ds['seed']} (send both to get the same data again)")
