@@ -4,10 +4,10 @@
 //   node generate.mjs
 //
 // Starts a dataset from a description, waits for it and saves the file.
-// API reference: https://generaterealdata.com/docs/api/
+// API reference: https://www.generaterealdata.com/docs/api/
 import { writeFile } from "node:fs/promises";
 
-const API = "https://generaterealdata.com/api/v1";
+const API = "https://www.generaterealdata.com/api/v1";
 const KEY = process.env.GRD_API_KEY;
 if (!KEY) {
   console.error("Set the GRD_API_KEY environment variable to your API key first.");

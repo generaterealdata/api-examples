@@ -4,10 +4,10 @@
 #   export GRD_API_KEY=grd_live_...
 #   bash quickstart.sh
 #
-# Needs curl and jq. API reference: https://generaterealdata.com/docs/api/
+# Needs curl and jq. API reference: https://www.generaterealdata.com/docs/api/
 set -euo pipefail
 
-API="https://generaterealdata.com/api/v1"
+API="https://www.generaterealdata.com/api/v1"
 AUTH="Authorization: Bearer ${GRD_API_KEY:?Set GRD_API_KEY to your API key first}"
 
 # 1. Start the dataset. The response has its id and a status.

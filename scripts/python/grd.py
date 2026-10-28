@@ -7,7 +7,7 @@
     python grd.py --schema-id sch_xxxxxxxx --rows 5000 --seed 42 --format json --out data.json
     python grd.py --sql ../../schemas/shop.sql --rows 500000 --dry-run
 
-Needs Python 3.8+ and the requests package. API reference: https://generaterealdata.com/docs/api/
+Needs Python 3.8+ and the requests package. API reference: https://www.generaterealdata.com/docs/api/
 """
 import argparse
 import os
@@ -18,7 +18,7 @@ from pathlib import Path
 
 import requests
 
-API = "https://generaterealdata.com/api/v1"
+API = "https://www.generaterealdata.com/api/v1"
 
 
 class ApiError(RuntimeError):

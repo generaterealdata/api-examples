@@ -1,8 +1,8 @@
 # GenerateRealData API examples
 
-Runnable examples for the [GenerateRealData](https://generaterealdata.com?ref=github) API: describe the data you need, or send your SQL schema, and get related tables back as CSV, JSON, Excel or SQL.
+Runnable examples for the [GenerateRealData](https://www.generaterealdata.com?ref=github) API: describe the data you need, or send your SQL schema, and get related tables back as CSV, JSON, Excel or SQL.
 
-Field lists can use 232 data types, one of the largest built-in type libraries of any test data generator, 222 of them with their own built-in generator (real airport and ICD-10 codes, VINs and IBANs with valid check digits, real cities with matching postcodes and time zones), and more than 200 automatic links keep related fields in each row consistent. The full list: `GET /api/v1/field-types` or the [API reference](https://generaterealdata.com/docs/api/?ref=github#types).
+Field lists can use 232 data types, one of the largest built-in type libraries of any test data generator, 222 of them with their own built-in generator (real airport and ICD-10 codes, VINs and IBANs with valid check digits, real cities with matching postcodes and time zones), and more than 200 automatic links keep related fields in each row consistent. The full list: `GET /api/v1/field-types` or the [API reference](https://www.generaterealdata.com/docs/api/?ref=github#types).
 
 Every notebook is saved with its output, so you can read the results here without running anything.
 
@@ -21,7 +21,7 @@ To open one in Google Colab, replace `github.com` with `colab.research.google.co
 
 ## Run them yourself
 
-1. **Get an API key.** Sign in at [generaterealdata.com](https://generaterealdata.com?ref=github), open the dashboard and click **Generate API key**. API access is part of the PRO, ULTRA and Enterprise plans.
+1. **Get an API key.** Sign in at [generaterealdata.com](https://www.generaterealdata.com?ref=github), open the dashboard and click **Generate API key**. API access is part of the PRO, ULTRA and Enterprise plans.
 2. **Keep the key out of the code.** Set it as an environment variable:
 
    ```bash
@@ -45,7 +45,7 @@ Each generated row uses one record of your plan. None of the examples uses AI-ge
 ```python
 import os, time, requests
 
-API = "https://generaterealdata.com/api/v1"
+API = "https://www.generaterealdata.com/api/v1"
 HEADERS = {"Authorization": f"Bearer {os.environ['GRD_API_KEY']}"}
 
 ds = requests.post(f"{API}/datasets", headers=HEADERS, timeout=70, json={
@@ -84,7 +84,7 @@ python scripts/python/grd.py --sql schemas/shop.sql --notes-file schemas/shop_ru
 
 ## More
 
-- [API reference](https://generaterealdata.com/docs/api/?ref=github): every parameter, error and limit
+- [API reference](https://www.generaterealdata.com/docs/api/?ref=github): every parameter, error and limit
 - [Free synthetic datasets](https://github.com/generaterealdata/synthetic-datasets): 11 ready-made databases with data cards and rule checks
 - Questions: support@generaterealdata.com
 
