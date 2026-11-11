@@ -85,7 +85,7 @@ python scripts/python/grd.py --sql schemas/shop.sql --notes-file schemas/shop_ru
 ## More
 
 - [API reference](https://www.generaterealdata.com/docs/api/?ref=github): every parameter, error and limit
-- [Free synthetic datasets](https://github.com/generaterealdata/synthetic-datasets): 11 ready-made databases with data cards and rule checks
+- [Free synthetic datasets](https://github.com/generaterealdata/synthetic-datasets): 15 ready-made databases with data cards and rule checks
 - Questions: support@generaterealdata.com
 
 The code in this repository is released under the [MIT licence](LICENSE).
